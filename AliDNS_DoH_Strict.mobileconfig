@@ -7,10 +7,10 @@
 		<dict>
 			<key>DNSSettings</key>
 			<dict>
+				<key>AllowFailover</key>
+				<false/>
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
-				<key>ServerURL</key>
-				<string>https://dns.alidns.com/dns-query</string>
 				<key>ServerAddresses</key>
 				<array>
 					<string>223.5.5.5</string>
@@ -18,15 +18,13 @@
 					<string>2400:3200::1</string>
 					<string>2400:3200:baba::1</string>
 				</array>
-				<key>AllowFailover</key>
-				<false/>
+				<key>ServerURL</key>
+				<string>https://dns.alidns.com/dns-query</string>
 			</dict>
-			<key>ProhibitDisablement</key>
-			<true/>
 			<key>PayloadDescription</key>
-			<string>通过 DNS over HTTPS（DoH） 使用阿里云公共 DNS 加密解析，保留原有 IPv4/IPv6 服务器地址。禁止回退至系统默认 DNS；加密 DNS 服务不可用时，使用此配置的域名解析将失败。保留禁止用户停用 DNS 设置选项；其生效条件由设备管理状态决定。</string>
+			<string>阿里云 DoH 加密 DNS；保留 IPv4/IPv6 服务器地址及 TLS 证书验证。不按网络接口、SSID 或域名限制，启用时用于系统默认 DNS 解析。AllowFailover=false：在支持该字段的系统上禁止回退到默认系统 DNS，加密解析不可用时相关新 DNS 查询失败。Apple 系统例外及 VPN DNS 优先级仍适用；不提供禁止用户停用功能。</string>
 			<key>PayloadDisplayName</key>
-			<string>阿里云 DOH 加密解析</string>
+			<string>阿里云 DoH 加密 DNS（全网络）</string>
 			<key>PayloadIdentifier</key>
 			<string>org.encrypted-dns.alidns.doh.strict.settings.94fe8afb-9d58-487a-b43f-c5cfb47a87e4</string>
 			<key>PayloadType</key>
@@ -35,12 +33,19 @@
 			<string>94FE8AFB-9D58-487A-B43F-C5CFB47A87E4</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
+			<key>OnDemandRules</key>
+			<array>
+				<dict>
+					<key>Action</key>
+					<string>Connect</string>
+				</dict>
+			</array>
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>通过 DNS over HTTPS（DoH） 使用阿里云公共 DNS 加密解析，保留原有 IPv4/IPv6 服务器地址。禁止回退至系统默认 DNS；加密 DNS 服务不可用时，使用此配置的域名解析将失败。保留禁止用户停用 DNS 设置选项；其生效条件由设备管理状态决定。</string>
+	<string>阿里云 DoH 加密 DNS；保留 IPv4/IPv6 服务器地址及 TLS 证书验证。不按网络接口、SSID 或域名限制，启用时用于系统默认 DNS 解析。AllowFailover=false：在支持该字段的系统上禁止回退到默认系统 DNS，加密解析不可用时相关新 DNS 查询失败。Apple 系统例外及 VPN DNS 优先级仍适用；不提供禁止用户停用功能。</string>
 	<key>PayloadDisplayName</key>
-	<string>阿里云加密 DNS · DOH 严格模式</string>
+	<string>阿里云 DoH · 全网络 · 禁止回退</string>
 	<key>PayloadIdentifier</key>
 	<string>org.encrypted-dns.alidns.doh.strict.profile.1fcc769f-7d42-4691-84b2-bc0533f4ad2a</string>
 	<key>PayloadType</key>
