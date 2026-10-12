@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>TLS</string>
+				<key>ServerAddresses</key>
+				<array>
+					<string>223.5.5.5</string>
+					<string>223.6.6.6</string>
+					<string>2400:3200::1</string>
+					<string>2400:3200:baba::1</string>
+				</array>
+				<key>ServerName</key>
+				<string>dns.alidns.com</string>
+				<key>AllowFailover</key>
+				<false/>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>通过 DNS over TLS（DoT） 使用阿里云公共 DNS 加密解析，保留原有 IPv4/IPv6 服务器地址。禁止回退至系统默认 DNS；加密 DNS 服务不可用时，使用此配置的域名解析将失败。</string>
+			<key>PayloadDisplayName</key>
+			<string>阿里云 DOT 加密解析</string>
+			<key>PayloadIdentifier</key>
+			<string>org.encrypted-dns.alidns.dot.strict.settings.e92b531d-bd3e-4d1d-ab4e-501893759c8a</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>E92B531D-BD3E-4D1D-AB4E-501893759C8A</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>通过 DNS over TLS（DoT） 使用阿里云公共 DNS 加密解析，保留原有 IPv4/IPv6 服务器地址。禁止回退至系统默认 DNS；加密 DNS 服务不可用时，使用此配置的域名解析将失败。</string>
+	<key>PayloadDisplayName</key>
+	<string>阿里云加密 DNS · DOT 严格模式</string>
+	<key>PayloadIdentifier</key>
+	<string>org.encrypted-dns.alidns.dot.strict.profile.ed7f5747-da03-4ad1-8188-fb9770737861</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>ED7F5747-DA03-4AD1-8188-FB9770737861</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
